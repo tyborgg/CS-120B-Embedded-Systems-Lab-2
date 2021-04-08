@@ -1,7 +1,7 @@
 /*	Author: tpast001
  *  Partner(s) Name: N/A
  *	Lab Section: 023
- *	Assignment: Lab #2  Exercise #3
+ *	Assignment: Lab #2  Exercise #2
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -41,13 +41,7 @@ int main(void) {
 			cntavail++;
 		}
 		
-		if(cntavail == 0){
-			PORTC = 0x80;	
-		}
-		else{
-			PORTC = cntavail;
-			PORTC = PORTC & 0x0F;
-		}
+		PORTC = cntavail;
 	}
 
     return 0;
