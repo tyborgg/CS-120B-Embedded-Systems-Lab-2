@@ -20,7 +20,6 @@ int main(void) {
 	unsigned char tmpA2;
 	unsigned char tmpA3;
 	unsigned char cntavail;
-	unsigned char cnt;
 
 	while(1){
 		tmpA0 = PINA & 0x01;
@@ -28,33 +27,27 @@ int main(void) {
 		tmpA2 = PINA & 0x04;
 		tmpA3 = PINA & 0x08;
 		cntavail = 0;
-		cnt = 15;
 
 		if(tmpA0 == 0){
 			cntavail++;
-			cnt -= 1;
 		}
 		if(tmpA1 == 0){
 			cntavail++;
-			cnt -= 2;
 		}
 		if(tmpA2 == 0){
 			cntavail++;
-			cnt -= 4;
 		}
 		if(tmpA3 == 0){
 			cntavail++;
-			cnt -= 8;
 		}
 		
 		if(cntavail == 0){
-			PORTC = 0x8F;	
+			PORTC = 0x80;	
 		}
 		else{
-			PORTC = cnt;
+			PORTC = cntavail;
 			PORTC = PORTC & 0x0F;
 		}
-			
 	}
 
     return 0;
