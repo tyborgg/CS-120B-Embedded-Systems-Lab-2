@@ -61,7 +61,7 @@ tests = [ {'description': 'Testing PORTD',
     'steps': [ {'inputs': [('PINA',0x38)], 'iterations': 5 },
 	       {'inputs': [('PINB',0x3C)], 'iterations': 5 },
 	       {'inputs': [('PINC',0x55)], 'iterations': 5 }],
-    'expected': [('PORTD',0x22)],
+    'expected': [('PORTD',0x31)],
     },
     ]
 #watch = ['PORTB']
