@@ -32,8 +32,6 @@ int main(void) {
 		if(tempSub > 80){
 			PORTD = PORTD | 0x02;
 		}
-
-		PORTD = PORTD | (tempAdd & 0xFC);
 	}
 
     return 0;
